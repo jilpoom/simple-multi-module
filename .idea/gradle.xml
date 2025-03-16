@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/exception-handler-core" />
             <option value="$PROJECT_DIR$/core/jpa-core" />
+            <option value="$PROJECT_DIR$/monolithic" />
             <option value="$PROJECT_DIR$/services" />
             <option value="$PROJECT_DIR$/services/board" />
             <option value="$PROJECT_DIR$/services/board/api" />
