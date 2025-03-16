@@ -12,6 +12,13 @@
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/exception-handler-core" />
             <option value="$PROJECT_DIR$/core/jpa-core" />
+            <option value="$PROJECT_DIR$/services" />
+            <option value="$PROJECT_DIR$/services/board" />
+            <option value="$PROJECT_DIR$/services/board/api" />
+            <option value="$PROJECT_DIR$/services/board/api/domain" />
+            <option value="$PROJECT_DIR$/services/board/api/exception" />
+            <option value="$PROJECT_DIR$/services/board/api/readmodel" />
+            <option value="$PROJECT_DIR$/services/board/application" />
           </set>
         </option>
       </GradleProjectSettings>
