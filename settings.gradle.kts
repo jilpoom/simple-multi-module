@@ -1,25 +1,24 @@
 rootProject.name = "nettee-simple-multi-module"
 
-include("common")
-include("monolithic")
+// Simple modules
+include("common", "monolithic")
 
-include("core:exception-handler-core")
-findProject(":core:exception-handler-core")?.name = "exception-handler-core"
+// Core modules
+val coreModules = listOf("exception-handler-core", "jpa-core")
+coreModules.forEach { module ->
+    val path = "core:$module"
+    include(path)
+    findProject(":$path")?.name = module
+}
 
-include("core:jpa-core")
-findProject(":core:jpa-core")?.name = "jpa-core"
+// Board service modules
+val boardApiSubModules = listOf("domain", "exception", "readmodel")
+boardApiSubModules.forEach { subModule ->
+    val path = "services:board:api:$subModule"
+    include(path)
+    findProject(":$path")?.name = subModule
+}
 
-include("services:board:api")
-findProject(":services:board:api")?.name = "api"
-
-include("services:board:api:domain")
-findProject(":services:board:api:domain")?.name = "domain"
-
-include("services:board:api:exception")
-findProject(":services:board:api:exception")?.name = "exception"
-
-include("services:board:api:readmodel")
-findProject(":services:board:api:readmodel")?.name = "readmodel"
-
+// Board application module
 include("services:board:application")
 findProject(":services:board:application")?.name = "application"
